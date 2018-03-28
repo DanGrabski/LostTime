@@ -45,6 +45,18 @@ You'll need python 2.x and `virtualenvwrapper` installed on a linux machine (or 
    $ mkvirtualenv losttime -a <ProjectFolder> -r requirements.txt
    ```
 
+   If `virtualenvwrapper` is not installed:
+   ```bash
+   pip install virtualenvwrapper
+   ```
+   Then add the following to ~/.bashrc:
+   ```bash
+   export WORKON_HOME=$HOME/.virtualenvs
+   source /usr/local/bin/virtualenvwrapper.sh
+   ```
+   
+   Then finally run `source ~/.bashrc`.
+
    It's likely that the `lxml` package will fail to install as it has some lower level C dependencies. Check out the lxml [http://lxml.de/installation.html](installation instructions) for help. I needed the following on my Ubuntu 14.04 in Windows Subsystem for Linux:
    ```bash
    (losttime)$ sudo apt-get install libxml2-dev libxslt-dev python-dev zlib1g-dev
